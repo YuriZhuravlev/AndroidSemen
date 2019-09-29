@@ -4,11 +4,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_work.*
 import java.io.*
 
 class Work : AppCompatActivity() {
 
     var player = player_class()
+
+    fun reload_stats(){
+        //val note = Toast.makeText(this, player.get_money().toString(), Toast.LENGTH_SHORT)
+        //note.show()
+        textView15.text = player.get_money().toString()
+        progressBar4.progress = player.get_relax()
+        progressBar3.progress = player.get_hungry()
+    }
 
     fun readfromfile(){
         val br = openFileInput("our.player")
@@ -30,24 +39,36 @@ class Work : AppCompatActivity() {
 
     fun work1(view: View){
         if (player.work1()){
+            reload_stats()
+            writeinfile()
+        }else{
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
         }
     }
     fun work2(view: View){
         if (player.work2()){
+            reload_stats()
+            writeinfile()
+        }else{
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
         }
     }
     fun work3(view: View){
         if (player.work3()){
+            reload_stats()
+            writeinfile()
+        }else{
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
         }
     }
     fun work4(view: View){
         if (player.work4()){
+            reload_stats()
+            writeinfile()
+        }else{
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
         }
@@ -57,5 +78,6 @@ class Work : AppCompatActivity() {
         readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_work)
+        reload_stats()
     }
 }

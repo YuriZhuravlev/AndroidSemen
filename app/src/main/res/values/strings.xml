@@ -14,6 +14,16 @@
     <string name="work2">Поискать шабашку</string>
     <string name="work3">Поискать работу (у богатых)</string>
     <string name="work4">Помочь бедноте</string>
+    <string name="seafront1">Читать газету</string>
+    <string name="seafront2">Дрочить, блять</string>
+    <string name="dacha1">Заселиться на день</string>
+    <string name="dacha2">Прогулка на свежем воздухе</string>
+    <string name="center1">Сходить в театр</string>
+    <string name="center2">Слушать глашатаев</string>
+    <string name="shop1">Update Clothes</string>
+    <string name="shop2">Update Flat/other</string>
+
+
     <string name="exit">Выход</string>
     <string name="create_new_player">Новая игра</string>
     <string name="settings">Настройки?Их_нет_LoL</string>

@@ -24,6 +24,22 @@ class MainActivity : AppCompatActivity() {
         val workpage = Intent(this, Work::class.java)
         startActivity(workpage)
     }
+    fun gotodacha(view: View) {
+        val dachapage = Intent(this, Dacha::class.java)
+        startActivity(dachapage)
+    }
+    fun gotocenter(view: View) {
+        val centerpage = Intent(this, Center::class.java)
+        startActivity(centerpage)
+    }
+    fun gotoseafront(view: View) {
+        val seafrontpage = Intent(this, Seafront::class.java)
+        startActivity(seafrontpage)
+    }
+    fun gotoshops(view: View) {
+        val shopspage = Intent(this, Shops::class.java)
+        startActivity(shopspage)
+    }
 
     fun readfromfile(){
         val br = openFileInput("our.player")
@@ -48,10 +64,15 @@ class MainActivity : AppCompatActivity() {
         finish()
     }
 
-    fun new_player_text(){
-        val newtext = Toast.makeText(this, "Внимание все достижения будут утеряны!", Toast.LENGTH_SHORT)
+    fun new_player_text(view: View){
+        player.set_relax(50)
+        player.set_hungry(50)
+        player.set_rep(0)
+        player.set_money(200)
+        writeinfile()
+        /*val newtext = Toast.makeText(this, "Внимание все достижения будут утеряны!", Toast.LENGTH_SHORT)
         newtext.show()
-        return
+        return*/
     }
 
     fun relax1(){
@@ -89,7 +110,5 @@ class MainActivity : AppCompatActivity() {
                 .commitNow()
         }
     }
-
-
 
 }
