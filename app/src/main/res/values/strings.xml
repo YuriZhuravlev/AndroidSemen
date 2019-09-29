@@ -1,5 +1,28 @@
 <resources>
-    <string name="app_name">interactive_map</string>
-    <string name="map1">Home1</string>
-    <string name="map2">Work1</string>
+    <string name="app_name">Симулятор Электрика-ЭСера</string>
+    <string name="map1">Дом</string>
+    <string name="map2">Промзона</string>
+    <string name="map3">Центр</string>
+    <string name="map4">Набережная</string>
+    <string name="map5">Дачи</string>
+    <string name="map6">Торговые ряды</string>
+    <string name="home1">Поспать</string>
+    <string name="home2">Почитать перед сном</string>
+    <string name="home3">Приготовить обед</string>
+    <string name="home4">Сходить в корчму</string>
+    <string name="work1">Отработать смену на эл/станции</string>
+    <string name="work2">Поискать шабашку</string>
+    <string name="work3">Поискать работу (у богатых)</string>
+    <string name="work4">Помочь бедноте</string>
+    <string name="exit">Выход</string>
+    <string name="create_new_player">Новая игра</string>
+    <string name="settings">Настройки?Их_нет_LoL</string>
+    <string name="gg_vp">gg_vp</string>
+
+    <string name="money">Деньги</string>
+    <string name="relax">Усталость</string>
+    <string name="eat">Голод</string>
+    <string name="rep">Репутация</string>
+    <string name="name">Имя</string>
+
 </resources>

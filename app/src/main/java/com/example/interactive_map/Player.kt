@@ -127,7 +127,7 @@ class player_class {
             relax -= 8
             if (hungry > 94) {
                 hungry = 100
-            } else hungry += 6
+            } else hungry += 10
             money -= 7
             return true
         }else return false

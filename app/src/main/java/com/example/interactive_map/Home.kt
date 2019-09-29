@@ -3,16 +3,27 @@ package com.example.interactive_map
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
+import android.widget.Toast
 import com.example.interactive_map.player_class
+import kotlinx.android.synthetic.main.activity_home.*
 import java.io.*
 
 class Home : AppCompatActivity() {
 
     var player = player_class()
 
+    fun reload_stats(){
+        //val note = Toast.makeText(this, player.get_money().toString(), Toast.LENGTH_SHORT)
+        //note.show()
+        textView7.text = player.get_money().toString()
+        progressBar.progress = player.get_relax()
+        progressBar2.progress = player.get_hungry()
+    }
+
     fun readfromfile(){
-        val br = BufferedReader(InputStreamReader(openFileInput( "out.player")))
-        player.set_name(br.toString())
+        val br = openFileInput("our.player")
         player.set_relax(br.read())
         player.set_hungry(br.read())
         player.set_rep(br.read())
@@ -21,23 +32,57 @@ class Home : AppCompatActivity() {
     }
 
     fun writeinfile(){
-        val bw = BufferedWriter(OutputStreamWriter(openFileOutput("our.player", MODE_PRIVATE)))
-        bw.write(player.get_name())
-        bw.newLine()
+        val bw = openFileOutput("our.player", MODE_PRIVATE)
         bw.write(player.get_relax())
-        bw.newLine()
         bw.write(player.get_hungry())
-        bw.newLine()
         bw.write(player.get_rep())
-        bw.newLine()
         bw.write(player.get_money())
-        bw.newLine()
         bw.close()
+    }
+
+    fun home1(view: View){
+        if (player.relax1()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+
+    }
+    fun home2(view: View){
+        if (player.relax4()){
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+    fun home3(view: View){
+        if (player.eat1()){
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+    fun home4(view: View){
+        if (player.eat2()){
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        reload_stats()
     }
+
 }
