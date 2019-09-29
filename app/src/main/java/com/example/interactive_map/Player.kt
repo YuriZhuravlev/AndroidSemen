@@ -1,0 +1,189 @@
+package com.example.interactive_map
+
+class player_class {
+    private var relax: Int = 15
+    private var hungry: Int = 15
+    //private var sleep: Int = 15
+    private var rep: Int = 15
+    private var money: Int = 150
+    private var name: String = ""
+    //var apartment: Int = 1
+    //var education: Int = 1
+    //var clothes: Int = 1
+
+    init {
+        relax=50
+        //sleep=50
+        hungry=50
+        money=200
+        rep=0
+        //name=name1
+    }
+    fun set_relax(count : Int){
+        if ((count>=0) && (count<101))
+            relax = count
+        return
+    }
+    fun set_hungry(count : Int){
+        if ((count>=0) && (count<101))
+            hungry = count
+        return
+    }
+    fun set_rep(count : Int){
+        if (count>=0)
+            rep = count
+        return
+    }
+    fun set_money(count : Int){
+        if (count >=0)
+            money = count
+        return
+    }
+    fun set_name(str : String){
+        name = str
+        return
+    }
+
+    fun get_relax():Int{
+        return relax
+    }
+    fun get_hungry():Int{
+        return hungry
+    }
+    fun get_rep():Int{
+        return rep
+    }
+    fun get_money():Int{
+        return money
+    }
+    fun get_name():String{
+        return name
+    }
+    /////////////////////////////////
+/////////////////////////////////
+    fun relax1():Boolean {
+        if (hungry > 10) {
+            if (relax > 85)
+                relax = 100
+            else
+                relax += 15
+            hungry -= 10
+            return true
+        }else return false
+    }
+    fun relax2():Boolean {
+        if (hungry > 20 && money > 15) {
+            if (relax > 65) {
+                relax = 100
+            } else {
+                relax += 35
+            }
+            hungry -= 20
+            money -= 15
+            return true
+        }else return false
+    }
+    fun relax3():Boolean {
+        if (money > 10) {
+            if (relax > 77) {
+                relax = 100
+            } else {
+                relax += 23
+            }
+            if (hungry > 95) {
+                hungry = 100
+            } else {
+                hungry += 5
+            }
+            money -= 10
+            return true
+        }else return false
+    }
+    fun relax4():Boolean {
+        if (hungry > 5 && money > 5) {
+            if (relax > 80) {
+                relax = 100
+            } else {
+                relax += 20
+            }
+            hungry -= 5
+            money -= 5
+            return true
+        }else return false
+    }
+    /////////////////////////////////
+    fun eat1():Boolean {
+        if (relax > 2 && money >= 4) {
+            relax -= 2
+            if (hungry > 94) {
+                hungry = 100; } else {
+                hungry += 6; }
+            money -= 4
+            return true
+        }else return false
+    }
+    fun eat2():Boolean {
+        if (relax > 8 && money >= 7){
+            relax -= 8
+            if (hungry > 94) {
+                hungry = 100
+            } else hungry += 6
+            money -= 7
+            return true
+        }else return false
+    }
+    fun eat3():Boolean {
+        if (relax>11 && money>=10) {
+            relax -= 11
+            if (hungry>75)
+                hungry = 100
+            else hungry +=25
+            money -= 10
+            return true
+        }else return false
+    }
+    fun eat4():Boolean {
+        if (relax>15 && money>=15) {
+            relax -= 15
+            if (hungry>70)
+                hungry = 100
+            else hungry += 30
+            money -= 15
+            return true
+        }else return false
+    }
+    /////////////////////////////////
+    fun work1():Boolean {
+        if (relax>10 && hungry>7) {
+            relax -= 10
+            hungry -= 7
+            money += 13
+            return true
+        }else return false
+    }
+    fun work2():Boolean {
+        if (relax>15 && hungry>14) {
+            relax -= 15
+            hungry -= 14
+            money += 34
+            return true
+        }else return false
+    }
+    fun work3():Boolean {
+        if (relax>35 && hungry>8) {
+            relax -= 35
+            hungry -= 8
+            money += 50
+            return true
+        }else return false
+    }
+    fun work4():Boolean {
+        if (relax>15 && hungry>30) {
+            relax -= 15
+            hungry -= 30
+            money += 15
+            return true
+        }else return false
+    }
+
+}
