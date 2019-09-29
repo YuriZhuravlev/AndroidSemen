@@ -29,7 +29,7 @@ class Work : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //readfromfile()
+        readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_work)
     }

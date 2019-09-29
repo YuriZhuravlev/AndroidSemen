@@ -22,25 +22,25 @@ class MainActivity : AppCompatActivity() {
         startActivity(homepage)
     }
     fun gotowork1(view: View) {
-        //writeinfile()
+        writeinfile()
         val workpage = Intent(this, Work::class.java)
         startActivity(workpage)
     }
 
     fun readfromfile(){
-        val br = BufferedReader(InputStreamReader(openFileInput("our.player")))
-        player.set_name(br.readLine())
-        player.set_relax(br.readLine().toInt())
-        player.set_hungry(br.readLine().toInt())
-        player.set_rep(br.readLine().toInt())
-        player.set_money(br.readLine().toInt())
+        val br = BufferedReader(InputStreamReader(openFileInput( "out.player")))
+        player.set_name(br.toString())
+        player.set_relax(br.read())
+        player.set_hungry(br.read())
+        player.set_rep(br.read())
+        player.set_money(br.read())
         br.close()
     }
 
     fun writeinfile(){
         val bw = BufferedWriter(
             OutputStreamWriter(
-                openFileOutput("our.player", MODE_PRIVATE))
+                openFileOutput("out.player", MODE_PRIVATE))
         )
         bw.write(player.get_name())
         bw.newLine()
@@ -55,13 +55,10 @@ class MainActivity : AppCompatActivity() {
         bw.close()
     }
 
-    /*fun exit_from_app(item : MenuItem) {
-        var id: Int = item.getItemId()
+    fun exit_from_app(view: View) {
         writeinfile()
-        if (id == R.id.nav_exit) {
-            finish()
-        }
-    }*/
+        finish()
+    }
 
     fun new_player_text(){
         val newtext = Toast.makeText(this, "Внимание все достижения будут утеряны!", Toast.LENGTH_SHORT)
@@ -144,7 +141,7 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //readfromfile()
+        readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {

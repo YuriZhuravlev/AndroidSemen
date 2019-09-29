@@ -12,11 +12,11 @@ class Home : AppCompatActivity() {
 
     fun readfromfile(){
         val br = BufferedReader(InputStreamReader(openFileInput( "out.player")))
-        player.set_name(br.readLine())
-        player.set_relax(br.readLine().toInt())
-        player.set_hungry(br.readLine().toInt())
-        player.set_rep(br.readLine().toInt())
-        player.set_money(br.readLine().toInt())
+        player.set_name(br.toString())
+        player.set_relax(br.read())
+        player.set_hungry(br.read())
+        player.set_rep(br.read())
+        player.set_money(br.read())
         br.close()
     }
 
