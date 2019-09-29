@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">interactive_map</string>
+    <string name="map1">Home1</string>
+    <string name="map2">Work1</string>
+</resources>
