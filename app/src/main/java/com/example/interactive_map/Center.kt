@@ -2,6 +2,8 @@ package com.example.interactive_map
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_center.*
 
 class Center : AppCompatActivity() {
@@ -30,6 +32,25 @@ class Center : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money())
         bw.close()
+    }
+
+    fun relax1(view: View){
+        if (player.relax3()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+    fun relax2(view: View){
+        if (player.relax2()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

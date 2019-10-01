@@ -9,7 +9,7 @@
     <string name="home1">Поспать</string>
     <string name="home2">Почитать перед сном</string>
     <string name="home3">Приготовить обед</string>
-    <string name="home4">Сходить в корчму</string>
+    <string name="home4">Сходить в трактир</string>
     <string name="work1">Отработать смену на эл/станции</string>
     <string name="work2">Поискать шабашку</string>
     <string name="work3">Поискать работу (у богатых)</string>
@@ -19,7 +19,7 @@
     <string name="dacha1">Заселиться на день</string>
     <string name="dacha2">Прогулка на свежем воздухе</string>
     <string name="center1">Сходить в театр</string>
-    <string name="center2">Слушать глашатаев</string>
+    <string name="center2">Сходить на площадь</string>
     <string name="shop1">Update Clothes</string>
     <string name="shop2">Update Flat/other</string>
 
@@ -30,8 +30,8 @@
     <string name="gg_vp">gg_vp</string>
 
     <string name="money">Деньги</string>
-    <string name="relax">Усталость</string>
-    <string name="eat">Голод</string>
+    <string name="relax">Бодрость</string>
+    <string name="eat">Сытость</string>
     <string name="rep">Репутация</string>
     <string name="name">Имя</string>
 

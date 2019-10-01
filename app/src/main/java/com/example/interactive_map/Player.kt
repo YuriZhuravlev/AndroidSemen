@@ -186,4 +186,29 @@ class player_class {
         }else return false
     }
 
+/////////////////////////////
+///     NEW_FUNCTION      ///
+/////////////////////////////
+
+    fun read_paper():Boolean {
+        if (hungry>6 && money > 1) {
+            if (relax > 96)
+                relax = 100
+            else relax += 4
+            hungry -= 6
+            money -= 1
+            return true
+        }else return false
+    }
+
+    fun kek_on_seafront():Boolean {
+        if (hungry>2) {
+            if (relax > 96)
+                relax = 100
+            else relax += 4
+            hungry -= 2
+            return true
+        }else return false
+    }
+
 }

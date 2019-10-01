@@ -2,6 +2,8 @@ package com.example.interactive_map
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_dacha.*
 
 class Dacha : AppCompatActivity() {
@@ -29,6 +31,25 @@ class Dacha : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money())
         bw.close()
+    }
+
+    fun relax3(view: View){
+        if (player.eat3()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+    fun relax4(view: View){
+        if (player.eat4()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

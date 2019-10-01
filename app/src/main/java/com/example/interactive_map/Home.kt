@@ -48,7 +48,6 @@ class Home : AppCompatActivity() {
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
         }
-
     }
     fun home2(view: View){
         if (player.relax4()){

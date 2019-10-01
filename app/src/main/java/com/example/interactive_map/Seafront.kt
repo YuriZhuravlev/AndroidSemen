@@ -2,6 +2,8 @@ package com.example.interactive_map
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_seafront.*
 
 class Seafront : AppCompatActivity() {
@@ -32,6 +34,26 @@ class Seafront : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money())
         bw.close()
+    }
+
+    fun read_paper(view: View){
+        if (player.read_paper()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+
+    fun kek(view: View){
+        if (player.kek_on_seafront()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно дрочить, дамы смотрят же!!!", Toast.LENGTH_SHORT)
+            note.show()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

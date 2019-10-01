@@ -75,31 +75,6 @@ class MainActivity : AppCompatActivity() {
         return*/
     }
 
-    fun relax1(){
-        if (player.relax3()){
-            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
-            note.show()
-        }
-    }
-    fun relax2(){
-        if (player.relax2()){
-            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
-            note.show()
-        }
-    }
-    fun relax3(){
-        if (player.eat3()){
-            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
-            note.show()
-        }
-    }
-    fun relax4(){
-        if (player.eat4()){
-            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
-            note.show()
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         //readfromfile()
         super.onCreate(savedInstanceState)

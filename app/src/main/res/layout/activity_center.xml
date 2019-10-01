@@ -52,6 +52,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:text="@string/center1"
+        android:onClick="relax1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
@@ -62,6 +63,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:text="@string/center2"
+        android:onClick="relax2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button14" />
