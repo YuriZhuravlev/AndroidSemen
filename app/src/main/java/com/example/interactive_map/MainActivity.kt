@@ -9,6 +9,7 @@ import android.content.Intent
 import android.view.View
 import com.example.interactive_map.ui.main.MainFragment
 import com.example.interactive_map.player_class
+import com.example.interactive_map.ui.main.SettingsActivity
 import java.io.*
 
 
@@ -40,13 +41,20 @@ class MainActivity : AppCompatActivity() {
         val shopspage = Intent(this, Shops::class.java)
         startActivity(shopspage)
     }
+    fun gotosettings(view: View) {
+        val settingspage = Intent(this, SettingsActivity::class.java)
+        startActivity(settingspage)
+    }
 
     fun readfromfile(){
         val br = openFileInput("our.player")
         player.set_relax(br.read())
         player.set_hungry(br.read())
         player.set_rep(br.read())
-        player.set_money(br.read())
+        var count : Int
+        count = br.read()
+        count = (count shl 8) or br.read()
+        player.set_money(count)
         br.close()
     }
 
@@ -55,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         bw.write(player.get_relax())
         bw.write(player.get_hungry())
         bw.write(player.get_rep())
+        bw.write(player.get_money() shr 8)
         bw.write(player.get_money())
         bw.close()
     }
@@ -69,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         player.set_hungry(50)
         player.set_rep(0)
         player.set_money(200)
+        player.set_name("Семён Манзырёв")
         writeinfile()
         /*val newtext = Toast.makeText(this, "Внимание все достижения будут утеряны!", Toast.LENGTH_SHORT)
         newtext.show()

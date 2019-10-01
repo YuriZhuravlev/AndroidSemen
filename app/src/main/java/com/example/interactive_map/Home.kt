@@ -27,7 +27,10 @@ class Home : AppCompatActivity() {
         player.set_relax(br.read())
         player.set_hungry(br.read())
         player.set_rep(br.read())
-        player.set_money(br.read())
+        var count : Int
+        count = br.read()
+        count = (count shl 8) or br.read()
+        player.set_money(count)
         br.close()
     }
 
@@ -36,6 +39,7 @@ class Home : AppCompatActivity() {
         bw.write(player.get_relax())
         bw.write(player.get_hungry())
         bw.write(player.get_rep())
+        bw.write(player.get_money() shr 8)
         bw.write(player.get_money())
         bw.close()
     }
