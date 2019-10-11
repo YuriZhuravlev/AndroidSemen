@@ -7,8 +7,8 @@ class player_class {
     private var rep: Int = 15
     private var money: Int = 150
     private var name: String = ""
+    private var intellect: Int = 1
     //var apartment: Int = 1
-    //var education: Int = 1
     //var clothes: Int = 1
 
     init {
@@ -43,6 +43,10 @@ class player_class {
         name = str
         return
     }
+    fun set_intellect(count : Int){
+        intellect = count
+        return
+    }
 
     fun get_relax():Int{
         return relax
@@ -59,7 +63,10 @@ class player_class {
     fun get_name():String{
         return name
     }
-    /////////////////////////////////
+    fun get_intellect():Int{
+        return intellect
+    }
+/////////////////////////////////
 /////////////////////////////////
     fun relax1():Boolean {
         if (hungry > 10) {
@@ -111,6 +118,18 @@ class player_class {
             return true
         }else return false
     }
+    fun relax5():Boolean {
+        if (hungry > 3 && money > 4) {
+            if (relax > 92) {
+                relax = 100
+            } else {
+                relax += 8
+            }
+            hungry -= 3
+            money -= 4
+            return true
+        }else return false
+    }
     /////////////////////////////////
     fun eat1():Boolean {
         if (relax > 2 && money >= 4) {
@@ -157,7 +176,7 @@ class player_class {
         if (relax>10 && hungry>7) {
             relax -= 10
             hungry -= 7
-            money += 13
+            money += 8
             return true
         }else return false
     }
@@ -165,15 +184,16 @@ class player_class {
         if (relax>15 && hungry>14) {
             relax -= 15
             hungry -= 14
-            money += 34
+            money += 13
             return true
-        }else return false
+        }else
+            return false
     }
     fun work3():Boolean {
         if (relax>35 && hungry>8) {
             relax -= 35
             hungry -= 8
-            money += 50
+            money += 25
             return true
         }else return false
     }
@@ -181,9 +201,16 @@ class player_class {
         if (relax>15 && hungry>30) {
             relax -= 15
             hungry -= 30
-            money += 15
+            money += 3
             return true
         }else return false
+    }
+    fun worktrouble(){
+        if (relax >= 5 && hungry >=4) {
+            relax -= 5
+            hungry -= 4
+        }
+        return
     }
 
 /////////////////////////////
@@ -197,10 +224,11 @@ class player_class {
             else relax += 4
             hungry -= 6
             money -= 1
+            if ((0..20).random() == 1)
+                intellect++
             return true
         }else return false
     }
-
     fun kek_on_seafront():Boolean {
         if (hungry>2) {
             if (relax > 96)
@@ -210,5 +238,48 @@ class player_class {
             return true
         }else return false
     }
+    fun go_library():Boolean {
+        if (relax>12 && hungry>6 && money > 1) {
+            relax -= 12
+            hungry -= 6
+            money -= 1
+            if ((0..5).random() == 1)
+                intellect++
+            return true
+        }else return false
+    }
+    fun narodnik():Boolean{
+        if (relax > 35 && hungry > 15 && money > 25) {
+            relax -= 35
+            hungry -= 15
+            money -= 25
+            return true
+        }else return false
+    }
+    fun theatre():Boolean{
+        if (hungry > 3 && money > 9) {
+            if (relax > 96) {
+                relax = 100
+            } else {
+                relax += 4
+            }
+            hungry -= 3
+            money -= 9
+            return true
+        }else return false
+    }
+    fun square():Boolean{
+        if (hungry > 2) {
+            if (relax > 98) {
+                relax = 100
+            } else {
+                relax += 2
+            }
+            hungry -= 2
+            return true
+        }else return false
+    }
+
+
 
 }

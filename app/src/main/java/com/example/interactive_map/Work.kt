@@ -28,6 +28,7 @@ class Work : AppCompatActivity() {
         count = br.read()
         count = (count shl 8) or br.read()
         player.set_money(count)
+        player.set_intellect(br.read())
         br.close()
     }
 
@@ -38,6 +39,7 @@ class Work : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money() shr 8)
         bw.write(player.get_money())
+        bw.write(player.get_intellect())
         bw.close()
     }
 
@@ -51,30 +53,48 @@ class Work : AppCompatActivity() {
         }
     }
     fun work2(view: View){
-        if (player.work2()){
-            reload_stats()
-            writeinfile()
+        if ((0..20).random() <= 15) {
+            if (player.work2()) {
+                reload_stats()
+                writeinfile()
+            } else {
+                val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+                note.show()
+            }
         }else{
-            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            val note = Toast.makeText(this, "Вам неудалось найти шабашку  :(", Toast.LENGTH_SHORT)
             note.show()
+            player.worktrouble()
         }
     }
     fun work3(view: View){
-        if (player.work3()){
-            reload_stats()
-            writeinfile()
+        if ((0..20).random() <= 10) {
+            if (player.work3()) {
+                reload_stats()
+                writeinfile()
+            } else {
+                val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+                note.show()
+            }
         }else{
-            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            val note = Toast.makeText(this, "Вам неудалось найти работу  :(", Toast.LENGTH_SHORT)
             note.show()
+            player.worktrouble()
         }
     }
     fun work4(view: View){
-        if (player.work4()){
-            reload_stats()
-            writeinfile()
+        if ((0..20).random() <= 13) {
+            if (player.work4()) {
+                reload_stats()
+                writeinfile()
+            } else {
+                val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+                note.show()
+            }
         }else{
-            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            val note = Toast.makeText(this, "Вам неудалось найти подработку  :(", Toast.LENGTH_SHORT)
             note.show()
+            player.worktrouble()
         }
     }
 

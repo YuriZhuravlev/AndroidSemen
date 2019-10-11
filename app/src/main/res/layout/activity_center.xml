@@ -52,7 +52,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:text="@string/center1"
-        android:onClick="relax1"
+        android:onClick="theatre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
@@ -63,7 +63,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
         android:text="@string/center2"
-        android:onClick="relax2"
+        android:onClick="square"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button14" />
@@ -97,5 +97,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView21"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="361dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/go_library"
+        android:onClick="go_library"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button15" />
+
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="361dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/relax3"
+        android:onClick="relax3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button20" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

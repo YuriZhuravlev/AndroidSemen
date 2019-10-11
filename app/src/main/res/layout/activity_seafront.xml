@@ -97,4 +97,15 @@
         app:layout_constraintEnd_toStartOf="@+id/textView24"
         app:layout_constraintStart_toEndOf="@+id/textView23"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="361dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/eat3"
+        android:onClick="eat3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button17" />
 </androidx.constraintlayout.widget.ConstraintLayout>

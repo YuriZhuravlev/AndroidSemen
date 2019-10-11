@@ -118,10 +118,30 @@
         android:layout_width="361dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
+        android:text="@string/eat2"
+        android:onClick="eat2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="361dp"
+        android:layout_height="48dp"
+        android:text="@string/eat4"
+        android:onClick="eat4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="361dp"
+        android:layout_height="48dp"
         android:text="@string/home4"
         android:onClick="home4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/button22" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

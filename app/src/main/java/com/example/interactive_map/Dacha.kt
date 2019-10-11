@@ -24,6 +24,7 @@ class Dacha : AppCompatActivity() {
         count = br.read()
         count = (count shl 8) or br.read()
         player.set_money(count)
+        player.set_intellect(br.read())
         br.close()
     }
 
@@ -34,11 +35,12 @@ class Dacha : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money() shr 8)
         bw.write(player.get_money())
+        bw.write(player.get_intellect())
         bw.close()
     }
 
-    fun relax3(view: View){
-        if (player.eat3()) {
+    fun relax2(view: View){
+        if (player.relax2()) {
             reload_stats()
             writeinfile()
         }else{
@@ -46,8 +48,17 @@ class Dacha : AppCompatActivity() {
             note.show()
         }
     }
-    fun relax4(view: View){
-        if (player.eat4()) {
+    fun relax5(view: View){
+        if (player.relax5()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+    fun narodnik(view: View){
+        if (player.narodnik()) {
             reload_stats()
             writeinfile()
         }else{

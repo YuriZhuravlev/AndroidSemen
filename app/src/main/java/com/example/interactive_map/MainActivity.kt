@@ -55,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         count = br.read()
         count = (count shl 8) or br.read()
         player.set_money(count)
+        player.set_intellect(br.read())
         br.close()
     }
 
@@ -65,6 +66,7 @@ class MainActivity : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money() shr 8)
         bw.write(player.get_money())
+        bw.write(player.get_intellect())
         bw.close()
     }
 
@@ -78,6 +80,7 @@ class MainActivity : AppCompatActivity() {
         player.set_hungry(50)
         player.set_rep(0)
         player.set_money(200)
+        player.set_intellect(1)
         player.set_name("Семён Манзырёв")
         writeinfile()
         /*val newtext = Toast.makeText(this, "Внимание все достижения будут утеряны!", Toast.LENGTH_SHORT)

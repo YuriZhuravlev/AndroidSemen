@@ -8,7 +8,7 @@
     <string name="map6">Торговые ряды</string>
     <string name="home1">Поспать</string>
     <string name="home2">Почитать перед сном</string>
-    <string name="home3">Приготовить обед</string>
+    <string name="home3">Перекусить</string>
     <string name="home4">Сходить в трактир</string>
     <string name="work1">Отработать смену на эл/станции</string>
     <string name="work2">Поискать шабашку</string>
@@ -20,9 +20,18 @@
     <string name="dacha2">Прогулка на свежем воздухе</string>
     <string name="center1">Сходить в театр</string>
     <string name="center2">Сходить на площадь</string>
+    <string name="go_library">Пойти в библиотеку</string>
     <string name="shop1">Update Clothes</string>
     <string name="shop2">Update Flat/other</string>
 
+    <string name="relax5">Прогулка по лесу</string>
+    <string name="narodnik">Народническая деят-ть</string>
+    <string name="theatre">Сходить в Театр</string>
+    <string name="square">Сходить на площадь</string>
+    <string name="eat2">Приготовить обед</string>
+    <string name="eat3">Посетить ресторан</string>
+    <string name="eat4">Потратить много времени на готовку</string>
+    <string name="relax3">Сходить в баню</string>
 
     <string name="exit">Выход</string>
     <string name="create_new_player">Новая игра</string>

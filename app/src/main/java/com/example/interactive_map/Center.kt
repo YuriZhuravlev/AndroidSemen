@@ -25,6 +25,7 @@ class Center : AppCompatActivity() {
         count = br.read()
         count = (count shl 8) or br.read()
         player.set_money(count)
+        player.set_intellect(br.read())
         br.close()
     }
 
@@ -35,11 +36,12 @@ class Center : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money() shr 8)
         bw.write(player.get_money())
+        bw.write(player.get_intellect())
         bw.close()
     }
 
-    fun relax1(view: View){
-        if (player.relax3()) {
+    fun theatre(view: View){
+        if (player.theatre()) {
             reload_stats()
             writeinfile()
         }else{
@@ -47,12 +49,31 @@ class Center : AppCompatActivity() {
             note.show()
         }
     }
-    fun relax2(view: View){
-        if (player.relax2()) {
+    fun square(view: View){
+        if (player.square()) {
             reload_stats()
             writeinfile()
         }else{
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+
+    fun go_library(view: View){
+        if (player.go_library()){
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this,"Невозможно выполнить!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+    fun relax3(view: View){
+        if (player.relax3()){
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this,"Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
         }
     }

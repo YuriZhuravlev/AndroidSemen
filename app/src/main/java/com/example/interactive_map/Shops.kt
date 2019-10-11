@@ -25,6 +25,7 @@ class Shops : AppCompatActivity() {
         count = br.read()
         count = (count shl 8) or br.read()
         player.set_money(count)
+        player.set_intellect(br.read())
         br.close()
     }
 
@@ -35,6 +36,7 @@ class Shops : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money() shr 8)
         bw.write(player.get_money())
+        bw.write(player.get_intellect())
         bw.close()
     }
 

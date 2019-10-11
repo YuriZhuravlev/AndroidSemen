@@ -27,6 +27,7 @@ class Seafront : AppCompatActivity() {
         count = br.read()
         count = (count shl 8) or br.read()
         player.set_money(count)
+        player.set_intellect(br.read())
         br.close()
     }
 
@@ -37,6 +38,7 @@ class Seafront : AppCompatActivity() {
         bw.write(player.get_rep())
         bw.write(player.get_money() shr 8)
         bw.write(player.get_money())
+        bw.write(player.get_intellect())
         bw.close()
     }
 
@@ -51,11 +53,20 @@ class Seafront : AppCompatActivity() {
     }
 
     fun kek(view: View){
-        if (player.kek_on_seafront()) {
+        if (((0..20).random()<=10) && player.kek_on_seafront()) {
             reload_stats()
             writeinfile()
         }else{
             val note = Toast.makeText(this, "Невозможно дрочить, дамы смотрят же!!!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+    fun eat3(view: View){
+        if (player.eat3()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
         }
     }
