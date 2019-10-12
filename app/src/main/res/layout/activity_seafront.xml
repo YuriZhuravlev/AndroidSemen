@@ -6,15 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".Seafront">
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="413dp"
-        android:layout_height="194dp"
-        android:layout_marginTop="64dp"
+    <ScrollView
+        android:layout_width="382dp"
+        android:layout_height="405dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/work2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="413dp"
+                android:layout_height="194dp"
+                app:srcCompat="@drawable/work2" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="read_paper"
+                android:text="@string/seafront1" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="kek"
+                android:text="@string/seafront2" />
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:onClick="eat3"
+                android:text="@string/eat3" />
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/textView22"
@@ -46,28 +78,6 @@
         app:layout_constraintStart_toEndOf="@+id/textView22"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button16"
-        android:layout_width="361dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/seafront1"
-        android:onClick="read_paper"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="361dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/seafront2"
-        android:onClick="kek"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button16" />
-
     <TextView
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
@@ -98,14 +108,4 @@
         app:layout_constraintStart_toEndOf="@+id/textView23"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button24"
-        android:layout_width="361dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/eat3"
-        android:onClick="eat3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button17" />
 </androidx.constraintlayout.widget.ConstraintLayout>

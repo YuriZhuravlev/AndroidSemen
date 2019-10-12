@@ -1,16 +1,10 @@
 package com.example.interactive_map
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.Toast
 import android.content.Intent
 import android.view.View
 import com.example.interactive_map.ui.main.MainFragment
-import com.example.interactive_map.player_class
-import com.example.interactive_map.ui.main.SettingsActivity
-import java.io.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,10 +35,10 @@ class MainActivity : AppCompatActivity() {
         val shopspage = Intent(this, Shops::class.java)
         startActivity(shopspage)
     }
-    fun gotosettings(view: View) {
+    /*fun gotosettings(view: View) {
         val settingspage = Intent(this, SettingsActivity::class.java)
         startActivity(settingspage)
-    }
+    }*/
 
     fun readfromfile(){
         val br = openFileInput("our.player")

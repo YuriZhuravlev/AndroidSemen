@@ -6,15 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".Shops">
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="413dp"
-        android:layout_height="194dp"
-        android:layout_marginTop="64dp"
+    <ScrollView
+        android:layout_width="382dp"
+        android:layout_height="405dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/shops" />
+        app:layout_constraintTop_toBottomOf="@+id/textView25">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="413dp"
+                android:layout_height="194dp"
+                android:layout_marginTop="64dp"
+                app:srcCompat="@drawable/shops" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/shop1" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/shop2" />
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/textView25"
@@ -46,26 +70,6 @@
         app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toEndOf="@+id/textView26"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="361dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/shop1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
-
-    <Button
-        android:id="@+id/button19"
-        android:layout_width="361dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/shop2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button18" />
 
     <TextView
         android:id="@+id/textView30"
