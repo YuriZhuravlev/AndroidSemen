@@ -2,6 +2,7 @@ package com.example.interactive_map
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_shops.*
 
 class Shops : AppCompatActivity() {
@@ -38,6 +39,9 @@ class Shops : AppCompatActivity() {
         bw.write(player.get_money())
         bw.write(player.get_intellect())
         bw.close()
+    }
+    fun go_to_map(view: View){
+        this.finish()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

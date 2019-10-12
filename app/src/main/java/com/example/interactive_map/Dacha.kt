@@ -66,6 +66,9 @@ class Dacha : AppCompatActivity() {
             note.show()
         }
     }
+    fun go_to_map(view: View){
+        this.finish()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         readfromfile()

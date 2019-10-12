@@ -1,5 +1,6 @@
 package com.example.interactive_map
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -65,10 +66,24 @@ class Seafront : AppCompatActivity() {
         if (player.eat3()) {
             reload_stats()
             writeinfile()
+            val questpages = Intent(this,QuestActivity::class.java)
+            startActivity(questpages)
         }else{
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
         }
+    }
+    fun smoke(view: View){
+        if (player.smoke()) {
+            reload_stats()
+            writeinfile()
+        }else{
+            val note = Toast.makeText(this, "Нечего курить ?_?!", Toast.LENGTH_SHORT)
+            note.show()
+        }
+    }
+    fun go_to_map(view: View){
+        this.finish()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

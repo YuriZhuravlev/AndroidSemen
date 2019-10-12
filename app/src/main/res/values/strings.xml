@@ -32,11 +32,13 @@
     <string name="eat3">Посетить ресторан</string>
     <string name="eat4">Потратить много времени на готовку</string>
     <string name="relax3">Сходить в баню</string>
+    <string name="smoke">Покурить</string>
 
     <string name="exit">Выход</string>
     <string name="create_new_player">Новая игра</string>
     <string name="settings">Настройки?Их_нет_LoL</string>
     <string name="gg_vp">gg_vp</string>
+    <string name="go_to_map">Вернуться на карту</string>
 
     <string name="money">Деньги</string>
     <string name="relax">Бодрость</string>

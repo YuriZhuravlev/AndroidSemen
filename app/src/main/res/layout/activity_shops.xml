@@ -23,7 +23,6 @@
                 android:id="@+id/imageView7"
                 android:layout_width="413dp"
                 android:layout_height="194dp"
-                android:layout_marginTop="64dp"
                 app:srcCompat="@drawable/shops" />
 
             <Button
@@ -100,4 +99,16 @@
         app:layout_constraintEnd_toStartOf="@+id/textView27"
         app:layout_constraintStart_toEndOf="@+id/textView25"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="go_to_map"
+        android:text="@string/go_to_map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

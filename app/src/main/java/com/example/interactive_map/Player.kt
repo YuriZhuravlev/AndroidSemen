@@ -279,7 +279,18 @@ class player_class {
             return true
         }else return false
     }
-
+    fun smoke():Boolean{
+        if (hungry > 1 && money > 1) {
+            if (relax > 98) {
+                relax = 100
+            } else {
+                relax += 2
+            }
+            hungry -= 1
+            money -= 1
+            return true
+        }else return false
+    }
 
 
 }
