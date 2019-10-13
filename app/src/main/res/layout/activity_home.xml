@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".Home">
 
     <ScrollView
@@ -21,89 +22,132 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="410dp"
-                android:layout_height="201dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:srcCompat="@drawable/flat1" />
 
             <Button
                 android:id="@+id/button4"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="home1"
-                android:text="@string/home1" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/home1"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button5"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="home2"
-                android:text="@string/home2" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/home2"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button6"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="home3"
-                android:text="@string/home3" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/home3"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button7"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="eat2"
-                android:text="@string/eat2" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/eat2"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button22"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="eat4"
-                android:text="@string/eat4" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/eat4"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button23"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="home4"
-                android:text="@string/home4" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/home4"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button30"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="smoke"
-                android:text="@string/smoke" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/smoke"
+                android:textColor="@color/button_text" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/textView4"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="24dp"
         android:text="@string/relax"
+        android:textColor="@color/text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/eat"
-        app:layout_constraintEnd_toEndOf="@+id/textView7"
-        app:layout_constraintHorizontal_bias="0.404"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/money"
+        android:textColor="@color/text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,23 +178,78 @@
 
     <TextView
         android:id="@+id/textView7"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/AppTheme.Button"
+        android:layout_width="178dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/button_fon"
         android:onClick="go_to_map"
+        android:shadowColor="@color/button_shad"
         android:text="@string/go_to_map"
+        android:textColor="@color/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="TextView"
+        android:textColor="@color/text"
+        app:layout_constraintBottom_toTopOf="@+id/button27"
+        app:layout_constraintStart_toEndOf="@+id/textView40"
+        style="@style/AppTheme.TextView" />
+
+    <TextView
+        android:id="@+id/textView38"
+        style="@style/AppTheme.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="TextView"
+        android:textColor="@color/text"
+        app:layout_constraintBottom_toTopOf="@+id/textView37"
+        app:layout_constraintStart_toEndOf="@+id/textView39" />
+
+    <TextView
+        android:id="@+id/textView39"
+        style="@style/AppTheme.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rep"
+        android:textColor="@color/text"
+        app:layout_constraintBottom_toTopOf="@+id/textView40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView40"
+        style="@style/AppTheme.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intellect"
+        android:textColor="@color/text"
+        app:layout_constraintBottom_toTopOf="@+id/button27"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

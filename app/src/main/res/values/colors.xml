@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#A3B4FF</color>
-    <color name="colorPrimaryDark">#383838</color>
-    <color name="colorAccent">#13005B</color>
+    <color name="colorPrimary">#666666</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#454545</color>
+    <color name="button_fon">#424242</color>
+    <color name="button_text">#FFFFFF</color>
+    <color name="button_shad">#66FFFFFF</color>
+    <color name="button_high">#303030</color>
+    <color name="alfa">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="text">#FFFFFF</color>
 </resources>

@@ -45,6 +45,7 @@
     <string name="eat">Сытость</string>
     <string name="rep">Репутация</string>
     <string name="name">Имя</string>
+    <string name="intellect">Интеллект</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Preference Titles -->

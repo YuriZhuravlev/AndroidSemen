@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.content.Intent
 import android.view.View
 import com.example.interactive_map.ui.main.MainFragment
+import kotlinx.android.synthetic.main.activity_quest.*
+import kotlinx.android.synthetic.main.main_fragment.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -72,7 +74,7 @@ class MainActivity : AppCompatActivity() {
     fun new_player_text(view: View){
         player.set_relax(50)
         player.set_hungry(50)
-        player.set_rep(0)
+        player.set_rep(5)
         player.set_money(200)
         player.set_intellect(1)
         player.set_name("Семён Манзырёв")
@@ -83,7 +85,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        //readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {

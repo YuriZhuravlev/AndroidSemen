@@ -253,6 +253,7 @@ class player_class {
             relax -= 35
             hungry -= 15
             money -= 25
+            rep += 5
             return true
         }else return false
     }

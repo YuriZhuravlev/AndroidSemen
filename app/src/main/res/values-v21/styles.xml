@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorControlHighlight">@color/button_high</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="AppTheme">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/kelvinchroman</item>
+    </style>
+
+    <style name="AppTheme.ButtonMap" parent="AppTheme">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:fontFamily">@font/kellyslab</item>
+    </style>
+
+    <style name="AppTheme.TextView" parent="AppTheme">
+        <item name="android:textSize">14dp</item>
+        <item name="android:fontFamily">@font/kelvinchroman</item>
+    </style>
+
+</resources>

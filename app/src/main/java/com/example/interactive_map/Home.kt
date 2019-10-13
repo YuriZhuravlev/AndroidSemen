@@ -15,11 +15,11 @@ class Home : AppCompatActivity() {
     var player = player_class()
 
     fun reload_stats(){
-        //val note = Toast.makeText(this, player.get_money().toString(), Toast.LENGTH_SHORT)
-        //note.show()
         textView7.text = player.get_money().toString()
         progressBar.progress = player.get_relax()
         progressBar2.progress = player.get_hungry()
+        textView37.text = player.get_intellect().toString()
+        textView38.text = player.get_rep().toString()
     }
 
     fun readfromfile(){

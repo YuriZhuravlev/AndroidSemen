@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".Shops">
 
     <ScrollView
@@ -21,62 +22,83 @@
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="413dp"
-                android:layout_height="194dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:srcCompat="@drawable/shops" />
 
             <Button
                 android:id="@+id/button18"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:text="@string/shop1" />
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
+                android:shadowColor="@color/button_shad"
+                android:text="@string/shop1"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button19"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:text="@string/shop2" />
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
+                android:shadowColor="@color/button_shad"
+                android:text="@string/shop2"
+                android:textColor="@color/button_text" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/textView25"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="24dp"
         android:text="@string/relax"
-        app:layout_constraintEnd_toStartOf="@+id/textView27"
-        app:layout_constraintStart_toEndOf="@+id/textView26"
+        android:textColor="@color/text"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView26"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/eat"
-        app:layout_constraintEnd_toStartOf="@+id/textView21"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView27"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/money"
+        android:textColor="@color/text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
-        app:layout_constraintStart_toEndOf="@+id/textView26"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView30"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text"
         app:layout_constraintStart_toEndOf="@+id/textView27"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -86,8 +108,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView25"
-        app:layout_constraintStart_toEndOf="@+id/textView26"
+        app:layout_constraintEnd_toStartOf="@+id/textView26"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
@@ -97,18 +119,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/textView27"
-        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintStart_toEndOf="@+id/textView26"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/AppTheme.Button"
+        android:layout_width="178dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/button_fon"
         android:onClick="go_to_map"
+        android:shadowColor="@color/button_shad"
         android:text="@string/go_to_map"
+        android:textColor="@color/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

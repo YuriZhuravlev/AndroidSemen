@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".Seafront">
 
     <ScrollView
@@ -21,77 +22,109 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="413dp"
-                android:layout_height="194dp"
-                app:srcCompat="@drawable/work2" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/seafront" />
 
             <Button
                 android:id="@+id/button16"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="read_paper"
-                android:text="@string/seafront1" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/seafront1"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button17"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="kek"
-                android:text="@string/seafront2" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/seafront2"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button24"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="eat3"
-                android:text="@string/eat3" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/eat3"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button26"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="smoke"
-                android:text="@string/smoke" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/smoke"
+                android:textColor="@color/button_text" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/textView22"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="24dp"
         android:text="@string/relax"
+        android:textColor="@color/text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView23"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/eat"
-        app:layout_constraintEnd_toStartOf="@+id/textView24"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView24"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/money"
+        android:textColor="@color/text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.68"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView31"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text"
         app:layout_constraintStart_toEndOf="@+id/textView24"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -117,13 +150,17 @@
 
     <Button
         android:id="@+id/button31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/AppTheme.Button"
+        android:layout_width="178dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/button_fon"
         android:onClick="go_to_map"
+        android:shadowColor="@color/button_shad"
         android:text="@string/go_to_map"
+        android:textColor="@color/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".Work">
 
     <ScrollView
@@ -21,68 +22,97 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="417dp"
-                android:layout_height="217dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:srcCompat="@drawable/work" />
 
             <Button
                 android:id="@+id/button8"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="work1"
-                android:text="@string/work1" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/work1"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button9"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="work2"
-                android:text="@string/work2" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/work2"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button10"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="work3"
-                android:text="@string/work3" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/work3"
+                android:textColor="@color/button_text" />
 
             <Button
                 android:id="@+id/button11"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/button_fon"
                 android:onClick="work4"
-                android:text="@string/work4" />
+                android:shadowColor="@color/button_shad"
+                android:text="@string/work4"
+                android:textColor="@color/button_text" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/textView8"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="24dp"
         android:text="@string/relax"
+        android:textColor="@color/text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView13"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/eat"
-        app:layout_constraintEnd_toStartOf="@+id/textView14"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
+        android:textColor="@color/text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView14"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
         android:text="@string/money"
+        android:textColor="@color/text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
@@ -99,34 +129,41 @@
 
     <ProgressBar
         android:id="@+id/progressBar4"
-        style="?android:attr/progressBarStyleHorizontal"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:max="100"
-        android:progress="50"
+        android:progress="26"
         app:layout_constraintEnd_toStartOf="@+id/textView13"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView15"
+        style="@style/AppTheme.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/text"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/AppTheme.Button"
+        android:layout_width="178dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
+        android:background="@color/button_fon"
         android:onClick="go_to_map"
+        android:shadowColor="@color/button_shad"
         android:text="@string/go_to_map"
+        android:textColor="@color/button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
