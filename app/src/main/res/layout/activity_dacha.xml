@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
@@ -9,8 +10,7 @@
     tools:context=".Dacha">
 
     <ScrollView
-        android:layout_width="382dp"
-        android:layout_height="405dp"
+        style="@style/AppTheme.ScrollView"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,42 +29,30 @@
 
             <Button
                 android:id="@+id/button12"
-                style="@style/AppTheme"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
-                android:background="@color/button_fon"
                 android:onClick="relax2"
-                android:shadowColor="@color/button_shad"
-                android:text="@string/dacha1"
-                android:textColor="@color/button_text"
-                android:textSize="16sp" />
+                android:text="@string/dacha1" />
 
             <Button
                 android:id="@+id/button13"
-                style="@style/AppTheme"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
-                android:background="@color/button_fon"
                 android:onClick="relax5"
-                android:shadowColor="@color/button_shad"
-                android:text="@string/dacha2"
-                android:textColor="@color/button_text"
-                android:textSize="16sp" />
+                android:text="@string/dacha2" />
 
             <Button
                 android:id="@+id/button21"
-                style="@style/AppTheme"
+                style="@style/AppTheme.Button"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
-                android:background="@color/button_fon"
                 android:onClick="narodnik"
-                android:shadowColor="@color/button_shad"
-                android:text="@string/narodnik"
-                android:textColor="@color/button_text"
-                android:textSize="16sp" />
+                android:text="@string/narodnik" />
         </LinearLayout>
     </ScrollView>
 
@@ -147,18 +135,12 @@
 
     <Button
         android:id="@+id/button29"
-        style="@style/AppTheme"
-        android:layout_width="178dp"
-        android:layout_height="40dp"
+        style="@style/AppTheme.ButtonBack"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@color/button_fon"
         android:onClick="go_to_map"
-        android:shadowColor="@color/button_shad"
         android:text="@string/go_to_map"
-        android:textColor="@color/button_text"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

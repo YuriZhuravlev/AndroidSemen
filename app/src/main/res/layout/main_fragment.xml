@@ -2,27 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     tools:context=".ui.main.MainFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/app_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="54dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,10 +46,10 @@
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintHorizontal_bias="0.289"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
-                app:layout_constraintVertical_bias="0.344" />
+                app:layout_constraintVertical_bias="0.337" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -98,12 +89,13 @@
                 android:onClick="gotoseafront"
                 android:text="@string/map4"
                 android:textAllCaps="false"
+                android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.296"
+                app:layout_constraintHorizontal_bias="0.26"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
-                app:layout_constraintVertical_bias="0.656" />
+                app:layout_constraintVertical_bias="0.705" />
 
             <TextView
                 android:id="@+id/textView11"
@@ -127,62 +119,28 @@
                 android:layout_height="wrap_content"
                 android:onClick="gotoshops"
                 android:text="@string/map6"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.881"
+                app:layout_constraintHorizontal_bias="0.864"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
-                app:layout_constraintVertical_bias="0.722" />
+                app:layout_constraintVertical_bias="0.696" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/button2"
-        style="@style/AppTheme.Button"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="16dp"
-        android:autoText="true"
-        android:background="@color/button_fon"
-        android:shadowColor="@color/button_shad"
-        android:text="@string/settings"
-        android:textColor="@color/button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintStart_toEndOf="@+id/button3" />
-
-    <Button
-        android:id="@+id/button3"
-        style="@style/AppTheme.Button"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="16dp"
-        android:autoText="true"
-        android:background="@color/button_fon"
-        android:onClick="new_player_text"
-        android:shadowColor="@color/button_shad"
-        android:text="@string/create_new_player"
-        android:textColor="@color/button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
         android:id="@+id/button"
-        style="@style/AppTheme.Button"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:autoText="true"
-        android:background="@color/button_fon"
-        android:onClick="exit_from_app"
-        android:shadowColor="@color/button_shad"
-        android:text="@string/exit"
-        android:textColor="@color/button_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        style="@style/AppTheme.ButtonBack"
+        android:layout_width="32dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#00FFFFFF"
+        android:drawableBottom="@drawable/go_menu"
+        android:onClick="exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

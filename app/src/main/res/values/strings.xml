@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Симулятор Электрика-ЭСера</string>
+    <string name="load_game">Продолжить</string>
+
     <string name="map1">Дом</string>
     <string name="map2">Промзона</string>
     <string name="map3">Центр</string>

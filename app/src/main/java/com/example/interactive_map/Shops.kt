@@ -3,6 +3,7 @@ package com.example.interactive_map
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_shops.*
 
 class Shops : AppCompatActivity() {
@@ -42,6 +43,19 @@ class Shops : AppCompatActivity() {
     }
     fun go_to_map(view: View){
         this.finish()
+    }
+
+    fun shopping(view:View) {
+        val a = player.get_money()
+        if (a > 10) {
+            player.set_money(a - 10)
+            reload_stats()
+            writeinfile()
+        }
+        else {
+            val note = Toast.makeText(this, "Последние деньги спускает...", Toast.LENGTH_SHORT)
+            note.show()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

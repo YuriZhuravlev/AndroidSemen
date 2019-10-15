@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
@@ -79,7 +80,7 @@
                 style="@style/AppTheme.TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="олтыавлоароипылоаирплиолапоиаыволр поаиполриолрифол иорыифволаи олыивфола иолывафори фыолива олиы иол иолфыви ори офрыи олыифол иваыфоли орлвыифол иыови олфиыв олиыфо иолаифв ффолывиа оваи лои лоифыло иваылои ловыи и оли лоивыфо иолыи оиыовафи роиылфвоаил иои ыфолви оиыв ф ио иор оил рывфил иылвои ол"
+                android:text="@string/quest1_begin"
                 android:textColor="@color/text"
                 android:textSize="14sp" />
 
@@ -89,10 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@color/button_fon"
-                android:shadowColor="@color/button_shad"
-                android:text="Button"
-                android:textColor="@color/button_text" />
+                android:text="Button" />
 
             <Button
                 android:id="@+id/button36"
@@ -100,10 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:background="@color/button_fon"
-                android:shadowColor="@color/button_shad"
-                android:text="Button"
-                android:textColor="@color/button_text" />
+                android:text="Button" />
         </LinearLayout>
     </ScrollView>
 

@@ -37,10 +37,6 @@ class MainActivity : AppCompatActivity() {
         val shopspage = Intent(this, Shops::class.java)
         startActivity(shopspage)
     }
-    /*fun gotosettings(view: View) {
-        val settingspage = Intent(this, SettingsActivity::class.java)
-        startActivity(settingspage)
-    }*/
 
     fun readfromfile(){
         val br = openFileInput("our.player")
@@ -66,22 +62,8 @@ class MainActivity : AppCompatActivity() {
         bw.close()
     }
 
-    fun exit_from_app(view: View) {
-        writeinfile()
-        finish()
-    }
-
-    fun new_player_text(view: View){
-        player.set_relax(50)
-        player.set_hungry(50)
-        player.set_rep(5)
-        player.set_money(200)
-        player.set_intellect(1)
-        player.set_name("Семён Манзырёв")
-        writeinfile()
-        /*val newtext = Toast.makeText(this, "Внимание все достижения будут утеряны!", Toast.LENGTH_SHORT)
-        newtext.show()
-        return*/
+    fun exit(view: View) {
+        this.finish()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
