@@ -21,6 +21,7 @@ class MenuActivity : AppCompatActivity() {
         player.set_name("Семён Манзырёв")
         writeinfile()
         startActivity(Intent(this,MainActivity::class.java))
+        startActivity(Intent(this,Home::class.java))
         //button37.isEnabled = true
     }
 

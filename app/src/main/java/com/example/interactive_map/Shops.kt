@@ -1,10 +1,12 @@
 package com.example.interactive_map
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_shops.*
+import java.io.IOException
 
 class Shops : AppCompatActivity() {
 
@@ -29,6 +31,47 @@ class Shops : AppCompatActivity() {
         player.set_money(count)
         player.set_intellect(br.read())
         br.close()
+    }
+
+    fun checkflag(x: Int):Boolean{
+        var y:Int = 0
+        try {
+            val br = openFileInput("flags")
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            br.close()
+        }catch (e:IOException){
+            val bw = openFileOutput("flags", Context.MODE_PRIVATE)
+            bw.write(0)
+            bw.write(0)
+            bw.write(0)
+            bw.write(0)
+            bw.close()
+        }
+        y = y and x
+        return (y==x)
+    }
+
+    fun newflag(x: Int){
+        var y:Int = 0
+        try {
+            val br = openFileInput("flags")
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            br.close()
+        }catch (e:IOException){
+            }
+        y = y or x
+        val bw = openFileOutput("flags", Context.MODE_PRIVATE)
+        bw.write(y shr 24)
+        bw.write(y shr 16)
+        bw.write(y shr 8)
+        bw.write(y)
+        bw.close()
     }
 
     fun writeinfile(){
@@ -59,9 +102,13 @@ class Shops : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shops)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        readfromfile()
         reload_stats()
     }
 }

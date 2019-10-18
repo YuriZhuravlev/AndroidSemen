@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.content.Intent
 import android.view.View
 import com.example.interactive_map.ui.main.MainFragment
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_quest.*
 import kotlinx.android.synthetic.main.main_fragment.*
+import java.io.IOException
 
 
 class MainActivity : AppCompatActivity() {
@@ -62,6 +64,14 @@ class MainActivity : AppCompatActivity() {
         bw.close()
     }
 
+    fun reload_stats(){
+        textView48.text = player.get_money().toString()
+        progressBar15.progress = player.get_relax()
+        progressBar16.progress = player.get_hungry()
+        textView42.text = player.get_intellect().toString()
+        textView41.text = player.get_rep().toString()
+    }
+
     fun exit(view: View) {
         this.finish()
     }
@@ -76,4 +86,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        readfromfile()
+        reload_stats()
+    }
 }

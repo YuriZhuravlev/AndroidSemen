@@ -22,6 +22,7 @@
 
             <ImageView
                 android:id="@+id/imageView3"
+                android:contentDescription="@string/describtion_work"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/work" />
@@ -144,6 +145,21 @@
         android:onClick="go_to_map"
         android:text="@string/go_to_map"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView51"
+        style="@style/AppTheme.TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/describtion_work"
+        app:layout_constraintBottom_toTopOf="@+id/button33"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

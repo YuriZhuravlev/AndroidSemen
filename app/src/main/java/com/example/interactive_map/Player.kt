@@ -243,7 +243,7 @@ class player_class {
             relax -= 12
             hungry -= 6
             money -= 1
-            if ((0..5).random() == 1)
+            if ((0..2).random() == 1)
                 intellect++
             return true
         }else return false

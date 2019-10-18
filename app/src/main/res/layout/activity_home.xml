@@ -9,6 +9,7 @@
     tools:context=".Home">
 
     <ScrollView
+        android:id="@+id/scrollView4"
         style="@style/AppTheme.ScrollView"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,6 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
+                android:longClickable="true"
                 android:onClick="home1"
                 android:text="@string/home1" />
 
@@ -41,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
+                android:longClickable="true"
                 android:onClick="home2"
                 android:text="@string/home2" />
 
@@ -50,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
+                android:longClickable="true"
                 android:onClick="home3"
                 android:text="@string/home3" />
 
@@ -59,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
+                android:longClickable="true"
                 android:onClick="eat2"
                 android:text="@string/eat2" />
 
@@ -68,6 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
+                android:longClickable="true"
                 android:onClick="eat4"
                 android:text="@string/eat4" />
 
@@ -77,6 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
+                android:longClickable="true"
                 android:onClick="home4"
                 android:text="@string/home4" />
 
@@ -86,6 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
+                android:longClickable="true"
                 android:onClick="smoke"
                 android:text="@string/smoke" />
         </LinearLayout>
@@ -175,47 +183,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        style="@style/AppTheme.TextView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/button27"
-        app:layout_constraintStart_toEndOf="@+id/textView40"
-        style="@style/AppTheme.TextView" />
-
-    <TextView
-        android:id="@+id/textView38"
-        style="@style/AppTheme.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textView37"
-        app:layout_constraintStart_toEndOf="@+id/textView39" />
-
-    <TextView
-        android:id="@+id/textView39"
-        style="@style/AppTheme.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/rep"
-        app:layout_constraintBottom_toTopOf="@+id/textView40"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView40"
-        style="@style/AppTheme.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/intellect"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/description_home"
         app:layout_constraintBottom_toTopOf="@+id/button27"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

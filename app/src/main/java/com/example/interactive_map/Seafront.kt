@@ -67,6 +67,7 @@ class Seafront : AppCompatActivity() {
             reload_stats()
             writeinfile()
             val questpages = Intent(this,QuestActivity::class.java)
+            questpages.putExtra("num",1)
             startActivity(questpages)
         }else{
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
@@ -87,9 +88,13 @@ class Seafront : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seafront)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        readfromfile()
         reload_stats()
     }
 }

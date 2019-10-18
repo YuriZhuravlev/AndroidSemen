@@ -97,10 +97,17 @@ class QuestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quest)
         reload_stats()
-        if ((0..2).random() == 1)
-            quest1()
-        else
-            quest2()
 
+        val arguments = intent.extras
+        if (arguments != null){
+            val num = arguments.getInt("num")
+            when (num) {
+                1 -> quest1()
+                2 -> quest2()
+            else ->{
+
+            }
+            }
+        }
     }
 }

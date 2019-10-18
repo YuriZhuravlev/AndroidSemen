@@ -18,8 +18,6 @@ class Home : AppCompatActivity() {
         textView7.text = player.get_money().toString()
         progressBar.progress = player.get_relax()
         progressBar2.progress = player.get_hungry()
-        textView37.text = player.get_intellect().toString()
-        textView38.text = player.get_rep().toString()
     }
 
     fun readfromfile(){
@@ -114,9 +112,13 @@ class Home : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        readfromfile()
         reload_stats()
     }
 

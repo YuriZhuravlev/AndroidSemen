@@ -82,9 +82,13 @@ class Center : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        readfromfile()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_center)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        readfromfile()
         reload_stats()
     }
 }
