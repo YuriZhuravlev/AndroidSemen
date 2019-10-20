@@ -111,6 +111,27 @@ class Home : AppCompatActivity() {
         this.finish()
     }
 
+    fun checkflag(x: Int):Boolean{
+        var y:Int = 0
+        try {
+            val br = openFileInput("flags")
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            y = (y shl 8) + br.read()
+            br.close()
+        }catch (e:IOException){
+            val bw = openFileOutput("flags", Context.MODE_PRIVATE)
+            bw.write(0)
+            bw.write(0)
+            bw.write(0)
+            bw.write(0)
+            bw.close()
+        }
+        y = y and x
+        return (y==x)
+    }
+
     fun show(str:String):Boolean{
         Toast.makeText(this,str,Toast.LENGTH_SHORT).show()
         return true
@@ -125,6 +146,9 @@ class Home : AppCompatActivity() {
         super.onResume()
         readfromfile()
         reload_stats()
+        if (checkflag(0x0400) || checkflag(0x0800))
+            imageView2.setImageResource(R.drawable.flat2)
+//            imageView2.drawable = getDrawable(R.drawable.flat2)
         button4.setOnLongClickListener { show(getString(R.string.relax1_show)) }
         button5.setOnLongClickListener { show(getString(R.string.relax4_show)) }
         button6.setOnLongClickListener { show(getString(R.string.eat1_show)) }

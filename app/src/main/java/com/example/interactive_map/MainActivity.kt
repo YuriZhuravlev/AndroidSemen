@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity() {
         val shopspage = Intent(this, Shops::class.java)
         startActivity(shopspage)
     }
+    fun gotosvalka(view: View) {
+        val svalkapage = Intent(this, svalka::class.java)
+        startActivity(svalkapage)
+    }
 
     fun readfromfile(){
         val br = openFileInput("our.player")

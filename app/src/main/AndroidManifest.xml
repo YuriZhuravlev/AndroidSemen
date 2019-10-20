@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/new_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".svalka"></activity>
         <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +24,7 @@
         <activity android:name=".Dacha" />
         <activity android:name=".Work" />
         <activity android:name=".Home" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

@@ -141,7 +141,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/describtion_shops"
+        android:text="@string/description_shops"
         app:layout_constraintBottom_toTopOf="@+id/button32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

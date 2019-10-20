@@ -22,7 +22,7 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:contentDescription="@string/describtion_work"
+                android:contentDescription="@string/description_work"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/work" />
@@ -157,7 +157,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/describtion_work"
+        android:text="@string/description_work"
         app:layout_constraintBottom_toTopOf="@+id/button33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -2,19 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/AppTheme"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:theme="@style/AppTheme"
-    tools:context=".Dacha">
+    tools:context=".svalka">
 
     <ScrollView
         style="@style/AppTheme.ScrollView"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17">
+        app:layout_constraintTop_toBottomOf="@+id/progressBar24">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,40 +27,11 @@
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/dacha" />
 
-            <Button
-                android:id="@+id/button12"
-                style="@style/AppTheme.Button"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="4dp"
-                android:onClick="relax2"
-                android:longClickable="true"
-                android:text="@string/dacha1" />
-
-            <Button
-                android:id="@+id/button13"
-                style="@style/AppTheme.Button"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="4dp"
-                android:onClick="relax5"
-                android:longClickable="true"
-                android:text="@string/dacha2" />
-
-            <Button
-                android:id="@+id/button21"
-                style="@style/AppTheme.Button"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="4dp"
-                android:onClick="narodnik"
-                android:longClickable="true"
-                android:text="@string/narodnik" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/textView69"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -74,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/textView70"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -88,7 +59,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/textView71"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -102,7 +73,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/textView72"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -112,32 +83,32 @@
         android:textAppearance="@style/AppTheme"
         android:textColor="@color/text"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toEndOf="@+id/textView71"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progressBar7"
+        android:id="@+id/progressBar23"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:progress="50"
-        app:layout_constraintEnd_toStartOf="@+id/textView17"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
+        app:layout_constraintEnd_toStartOf="@+id/textView70"
+        app:layout_constraintStart_toEndOf="@+id/textView69"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progressBar8"
+        android:id="@+id/progressBar24"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView18"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
+        app:layout_constraintEnd_toStartOf="@+id/textView71"
+        app:layout_constraintStart_toEndOf="@+id/textView70"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button29"
+        android:id="@+id/button52"
         style="@style/AppTheme.ButtonBack"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -148,7 +119,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView40"
+        android:id="@+id/textView73"
         style="@style/AppTheme.TextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -157,9 +128,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/description_dacha"
-        app:layout_constraintBottom_toTopOf="@+id/button29"
+        android:text="@string/description_svalka"
+        app:layout_constraintBottom_toTopOf="@+id/button52"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
