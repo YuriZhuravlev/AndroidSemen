@@ -92,6 +92,22 @@ class QuestActivity : AppCompatActivity() {
         button36.setOnClickListener { this.finish() }
     }
 
+    fun quest4(){
+        textView32.text=getString(R.string.quest4_text)
+        button35.text=getString(R.string.quest4_var1)
+        button36.text=getString(R.string.quest4_var2)
+        button35.setOnClickListener { textView32.text=getString(R.string.quest4_1_text)
+            button35.text=getString(R.string.quest4_1_var1)
+            button35.setOnClickListener { this.finish() }
+            button36.text=getString(R.string.quest4_1_var2)
+            button36.setOnClickListener {
+                player.set_rep(player.get_rep()+1)
+                writeinfile()
+                this.finish() }
+        }
+        button36.setOnClickListener { this.finish() }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         readfromfile()
         super.onCreate(savedInstanceState)
@@ -104,6 +120,7 @@ class QuestActivity : AppCompatActivity() {
             when (num) {
                 1 -> quest1()
                 2 -> quest2()
+                4 -> quest4()
             else ->{
 
             }

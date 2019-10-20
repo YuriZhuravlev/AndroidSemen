@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Симулятор Электрика-ЭСера</string>
     <string name="load_game">Продолжить</string>
+    <string name="version">ver. 0.005a</string>
 
     <string name="map1">Дом</string>
     <string name="map2">Промзона</string>
@@ -45,10 +46,12 @@
     <string name="describtion_work">Южная часть Петербурга с промышленностью и бедным населением, нищета, нравы, отсутствие элементарных благ для существования, примерно такое описание стоит дать.</string>
     <string name="describtion_undeground">Подполье</string>
 
+    <string name="clothes0">Лохмотья</string>
     <string name="clothes1">Обычная одежда</string>
     <string name="clothes2">Хороший костюм</string>
     <string name="clothes3">Отличный костюм</string>
     <string name="clothes4">Превосходное качество</string>
+    <string name="flat0">Кровать в бараке</string>
     <string name="flat1">Дешевая съёмная комната</string>
     <string name="flat2">Хорошая съёмная комната</string>
     <string name="flat3">Дешевая съёмная квартира</string>
@@ -82,5 +85,28 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- Лонгклики -->
+    <string name="work1_show">-10 Бод -7 Сыт +8 Ден</string>
+    <string name="work2_show">-15 Бод -14 Сыт +13 Ден</string>
+    <string name="work3_show">-35 Бод -8 Сыт +25 Ден</string>
+    <string name="work4_show">-15 Бод -30 Сыт +3 Ден</string>
+    <string name="relax1_show">+15 Бод -10 Сыт</string>
+    <string name="relax2_show">+35 Бод -20 Сыт -15 Ден</string>
+    <string name="relax3_show">+23 Бод +5 Сыт -10 Ден</string>
+    <string name="relax4_show">+23 Бод +5 Сыт -10 Ден</string>
+    <string name="relax5_show">+8 Бод -3 Сыт -4 Ден</string>
+    <string name="eat1_show">-2 Бод +6 Сыт -4 Ден</string>
+    <string name="eat2_show">-8 Бод +10 Сыт -7 Ден</string>
+    <string name="eat3_show">-11 Бод +25 Сыт -10 Ден</string>
+    <string name="eat4_show">-15 Бод +30 Сыт -15 Ден</string>
+    <string name="read_paper_show">+4 Бод -6 Сыт -1 Ден</string>
+    <string name="kek_show">+4 Бод -2 Сыт</string>
+    <string name="smoke_show">+2 Бод -1 Сыт -1 Ден</string>
+    <string name="go_library_show">-12 Бод -6 Сыт -1 Ден</string>
+    <string name="narodnik_show">-35 Бод -15 Сыт -25 Ден</string>
+    <string name="theatre_show">+7 Бод -3 Сыт -9 Ден</string>
+    <string name="square_show">+2 Бод -2 Сыт</string>
+
 
 </resources>

@@ -34,6 +34,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
                 android:onClick="relax2"
+                android:longClickable="true"
                 android:text="@string/dacha1" />
 
             <Button
@@ -43,6 +44,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
                 android:onClick="relax5"
+                android:longClickable="true"
                 android:text="@string/dacha2" />
 
             <Button
@@ -52,6 +54,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="4dp"
                 android:onClick="narodnik"
+                android:longClickable="true"
                 android:text="@string/narodnik" />
         </LinearLayout>
     </ScrollView>

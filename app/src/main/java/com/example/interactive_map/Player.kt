@@ -259,10 +259,10 @@ class player_class {
     }
     fun theatre():Boolean{
         if (hungry > 3 && money > 9) {
-            if (relax > 96) {
+            if (relax > 93) {
                 relax = 100
             } else {
-                relax += 4
+                relax += 7
             }
             hungry -= 3
             money -= 9

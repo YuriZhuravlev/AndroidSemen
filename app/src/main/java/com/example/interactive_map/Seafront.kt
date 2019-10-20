@@ -87,6 +87,11 @@ class Seafront : AppCompatActivity() {
         this.finish()
     }
 
+    fun show(str:String):Boolean{
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show()
+        return true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seafront)
@@ -96,5 +101,9 @@ class Seafront : AppCompatActivity() {
         super.onResume()
         readfromfile()
         reload_stats()
+        button16.setOnLongClickListener { show(getString(R.string.read_paper_show)) }
+        button17.setOnLongClickListener { show(getString(R.string.kek_show)) }
+        button24.setOnLongClickListener { show(getString(R.string.eat3_show)) }
+        button26.setOnLongClickListener { show(getString(R.string.smoke_show)) }
     }
 }

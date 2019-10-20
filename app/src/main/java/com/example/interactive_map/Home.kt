@@ -111,6 +111,11 @@ class Home : AppCompatActivity() {
         this.finish()
     }
 
+    fun show(str:String):Boolean{
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show()
+        return true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -120,6 +125,13 @@ class Home : AppCompatActivity() {
         super.onResume()
         readfromfile()
         reload_stats()
+        button4.setOnLongClickListener { show(getString(R.string.relax1_show)) }
+        button5.setOnLongClickListener { show(getString(R.string.relax4_show)) }
+        button6.setOnLongClickListener { show(getString(R.string.eat1_show)) }
+        button7.setOnLongClickListener { show(getString(R.string.eat2_show)) }
+        button22.setOnLongClickListener { show(getString(R.string.eat4_show)) }
+        button23.setOnLongClickListener { show(getString(R.string.eat4_show)) }
+        button30.setOnLongClickListener { show(getString(R.string.smoke_show)) }
     }
 
 }

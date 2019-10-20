@@ -70,6 +70,11 @@ class Dacha : AppCompatActivity() {
         this.finish()
     }
 
+    fun show(str:String):Boolean{
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show()
+        return true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dacha)
@@ -79,5 +84,8 @@ class Dacha : AppCompatActivity() {
         super.onResume()
         readfromfile()
         reload_stats()
+        button12.setOnLongClickListener { show(getString(R.string.relax2_show)) }
+        button13.setOnLongClickListener { show(getString(R.string.relax5_show)) }
+        button21.setOnLongClickListener { show(getString(R.string.narodnik_show)) }
     }
 }

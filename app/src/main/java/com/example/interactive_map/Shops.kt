@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_shops.*
 import java.io.IOException
 
@@ -101,6 +102,148 @@ class Shops : AppCompatActivity() {
         }
     }
 
+    /*
+    Дешевая съёмная комната 0x0100
+Хорошая съёмная комната 0x0200
+Дешевая съёмная квартира 0x0400
+Своя квартира 0x0800
+Обычная одежда 0x1000
+Хороший костюм 0x2000
+Отличный костюм 0x4000
+Превосходное качество 0x8000
+     */
+
+    fun buy_cloth1(){
+        if (!checkflag(0x1000)) {
+            if (player.get_money() > 15) {
+                player.set_money(player.get_money() - 15)
+                reload_stats()
+                writeinfile()
+                newflag(0x1000)
+                reload_button()
+            } else
+                Toast.makeText(this, "Net monet", Toast.LENGTH_SHORT).show()
+        }else
+            Toast.makeText(this, "Вы уже купили", Toast.LENGTH_SHORT).show()
+    }
+    fun buy_cloth2(){
+        if (!checkflag(0x2000)) {
+            if (player.get_money() > 40) {
+                player.set_money(player.get_money() - 40)
+                reload_stats()
+                writeinfile()
+                newflag(0x2000)
+                reload_button()
+            } else
+                Toast.makeText(this, "Net monet", Toast.LENGTH_SHORT).show()
+        }else
+            Toast.makeText(this, "Вы уже купили", Toast.LENGTH_SHORT).show()
+    }
+    fun buy_cloth3(){
+        if (!checkflag(0x4000)) {
+            if (player.get_money() > 80) {
+                player.set_money(player.get_money() - 80)
+                reload_stats()
+                writeinfile()
+                newflag(0x4000)
+                reload_button()
+            } else
+                Toast.makeText(this, "Net monet", Toast.LENGTH_SHORT).show()
+        }else
+            Toast.makeText(this, "Вы уже купили", Toast.LENGTH_SHORT).show()
+    }
+    fun buy_cloth4(){
+        if (!checkflag(0x8000)) {
+            if (player.get_money() > 150) {
+                player.set_money(player.get_money() - 150)
+                reload_stats()
+                writeinfile()
+                newflag(0x8000)
+                reload_button()
+            } else
+                Toast.makeText(this, "Net monet", Toast.LENGTH_SHORT).show()
+        }else
+            Toast.makeText(this, "Вы уже купили", Toast.LENGTH_SHORT).show()
+    }
+
+
+    fun buy_flat1(){
+        if (!checkflag(0x0100)) {
+            if (player.get_money() > 15) {
+                player.set_money(player.get_money() - 15)
+                reload_stats()
+                writeinfile()
+                newflag(0x0100)
+                reload_button()
+            } else
+                Toast.makeText(this, "Net monet", Toast.LENGTH_SHORT).show()
+        }else
+            Toast.makeText(this, "Вы уже купили", Toast.LENGTH_SHORT).show()
+    }
+    fun buy_flat2(){
+        if (!checkflag(0x0200)) {
+            if (player.get_money() > 40) {
+                player.set_money(player.get_money() - 40)
+                reload_stats()
+                writeinfile()
+                newflag(0x0200)
+                reload_button()
+            } else
+                Toast.makeText(this, "Net monet", Toast.LENGTH_SHORT).show()
+        }else
+            Toast.makeText(this, "Вы уже купили", Toast.LENGTH_SHORT).show()
+    }
+    fun buy_flat3(){
+        if (!checkflag(0x0400)) {
+            if (player.get_money() > 80) {
+                player.set_money(player.get_money() - 80)
+                reload_stats()
+                writeinfile()
+                newflag(0x0400)
+                reload_button()
+            } else
+                Toast.makeText(this, "Net monet", Toast.LENGTH_SHORT).show()
+        }else
+            Toast.makeText(this, "Вы уже купили", Toast.LENGTH_SHORT).show()
+    }
+    fun buy_flat4(){
+        if (!checkflag(0x0800)) {
+            if (player.get_money() > 150) {
+                player.set_money(player.get_money() - 150)
+                reload_stats()
+                writeinfile()
+                newflag(0x0800)
+                reload_button()
+            } else
+                Toast.makeText(this, "Net monet", Toast.LENGTH_SHORT).show()
+        }else
+            Toast.makeText(this, "Вы уже купили", Toast.LENGTH_SHORT).show()
+    }
+
+    fun show(str:String):Boolean{
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show()
+        return true
+    }
+
+    fun reload_button(){
+        var flat:String; var clot:String;
+        when {
+            checkflag(0x0800) -> {flat = getString(R.string.flat4) ; button19.isEnabled=false; button19.isVisible =false}
+            checkflag(0x0400) -> {flat = getString(R.string.flat3) ; button19.text=getString(R.string.flat4) ; button19.setOnClickListener { buy_flat4() } }
+            checkflag(0x0200) -> {flat = getString(R.string.flat2) ; button19.text=getString(R.string.flat3) ; button19.setOnClickListener { buy_flat3() } }
+            checkflag(0x0100) -> {flat = getString(R.string.flat1) ; button19.text=getString(R.string.flat2) ; button19.setOnClickListener { buy_flat2() } }
+            else -> {flat = getString(R.string.flat0) ; button19.text=getString(R.string.flat1) ; button19.setOnClickListener { buy_flat1() } }
+        }
+        when {
+            checkflag(0x8000) -> { clot = getString(R.string.clothes4) ; button18.isEnabled=false; button18.isVisible =false }
+            checkflag(0x4000) -> { clot = getString(R.string.clothes3) ; button18.text=getString(R.string.clothes4) ; button18.setOnClickListener { buy_cloth4() } }
+            checkflag(0x2000) -> { clot = getString(R.string.clothes2) ; button18.text=getString(R.string.clothes3) ; button18.setOnClickListener { buy_cloth3() } }
+            checkflag(0x1000) -> { clot = getString(R.string.clothes1) ; button18.text=getString(R.string.clothes2) ; button18.setOnClickListener { buy_cloth2() } }
+            else -> { clot = getString(R.string.clothes0) ; button18.text=getString(R.string.clothes1) ; button18.setOnClickListener { buy_cloth1() } }
+        }
+        textView53.text = "$flat твой дом. $clot твой наряд."
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shops)
@@ -110,5 +253,9 @@ class Shops : AppCompatActivity() {
         super.onResume()
         readfromfile()
         reload_stats()
+        reload_button()
+        //button19.setOnClickListener { buy_flat1() }
+        //button19.setOnLongClickListener { show("15 monet") }
+
     }
 }

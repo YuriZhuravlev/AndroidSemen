@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_work.*
+import kotlinx.android.synthetic.main.main_fragment.*
 import java.io.*
 
 class Work : AppCompatActivity() {
@@ -101,9 +102,18 @@ class Work : AppCompatActivity() {
         this.finish()
     }
 
+    fun show(str:String):Boolean{
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show()
+        return true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_work)
+        button8.setOnLongClickListener { show(getString(R.string.work1_show)) }
+        button9.setOnLongClickListener { show(getString(R.string.work2_show)) }
+        button10.setOnLongClickListener { show(getString(R.string.work3_show)) }
+        button11.setOnLongClickListener { show(getString(R.string.work4_show)) }
     }
 
     override fun onResume() {

@@ -1,5 +1,6 @@
 package com.example.interactive_map
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -63,6 +64,13 @@ class Center : AppCompatActivity() {
         if (player.go_library()){
             reload_stats()
             writeinfile()
+            if ((0..4).random()==1) {
+                val questpages = Intent(this, QuestActivity::class.java)
+                questpages.putExtra("num", 4)
+                startActivity(questpages)
+                readfromfile()
+                reload_stats()
+            }
         }else{
             val note = Toast.makeText(this,"Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
@@ -80,15 +88,25 @@ class Center : AppCompatActivity() {
     fun go_to_map(view: View){
         this.finish()
     }
+    fun show(str:String):Boolean{
+        Toast.makeText(this,str,Toast.LENGTH_SHORT).show()
+        return true
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_center)
+        button14.setOnLongClickListener { show(getString(R.string.theatre_show)) }
+        button15.setOnLongClickListener { show(getString(R.string.square_show)) }
+        button20.setOnLongClickListener { show(getString(R.string.go_library_show)) }
+        button25.setOnLongClickListener { show(getString(R.string.relax3_show)) }
+
     }
 
     override fun onResume() {
         super.onResume()
         readfromfile()
         reload_stats()
+
     }
 }

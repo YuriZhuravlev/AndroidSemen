@@ -1,5 +1,6 @@
 package com.example.interactive_map
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,9 +21,20 @@ class MenuActivity : AppCompatActivity() {
         player.set_intellect(1)
         player.set_name("Семён Манзырёв")
         writeinfile()
+        newflags()
         startActivity(Intent(this,MainActivity::class.java))
         startActivity(Intent(this,Home::class.java))
         //button37.isEnabled = true
+    }
+
+    fun newflags(){
+        val bw = openFileOutput("flags", Context.MODE_PRIVATE)
+        var y=0;
+        bw.write(y shr 24)
+        bw.write(y shr 16)
+        bw.write(y shr 8)
+        bw.write(y)
+        bw.close()
     }
 
     fun load_game(view: View){
