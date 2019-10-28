@@ -70,10 +70,10 @@ class player_class {
 /////////////////////////////////
     fun relax1():Boolean {
         if (hungry > 10) {
-            if (relax > 85)
+            if (relax > 80)
                 relax = 100
             else
-                relax += 15
+                relax += 20
             hungry -= 10
             return true
         }else return false

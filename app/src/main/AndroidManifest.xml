@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.interactive_map">
-
+    <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="29" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/new_icon"
@@ -9,22 +9,32 @@
         android:roundIcon="@mipmap/new_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".svalka"></activity>
-        <activity android:name=".MenuActivity">
+        <activity android:name=".svalka"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".MenuActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".QuestActivity" />
-        <activity android:name=".Shops" />
-        <activity android:name=".Seafront" />
-        <activity android:name=".Center" />
-        <activity android:name=".Dacha" />
-        <activity android:name=".Work" />
-        <activity android:name=".Home" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".QuestActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Shops"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Seafront"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Center"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Dacha"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Work"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Home"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

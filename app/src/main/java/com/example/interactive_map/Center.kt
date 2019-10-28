@@ -1,15 +1,18 @@
 package com.example.interactive_map
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_center.*
+import java.io.IOException
 
 class Center : AppCompatActivity() {
 
     var player = player_class()
+    var scen_save = Array(4,{0})
 
     fun reload_stats(){
         textView28.text = player.get_money().toString()
@@ -41,6 +44,41 @@ class Center : AppCompatActivity() {
         bw.close()
     }
 
+    fun loadsave(){
+        try {
+            val br = openFileInput("save")
+            for (i in 0..3){
+                scen_save[i]=0
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+            }
+            br.close()
+        }catch (e: IOException){
+            val bw = openFileOutput("save", Context.MODE_PRIVATE)
+            for (i in 0..3) {
+                bw.write(0)
+                bw.write(0)
+                bw.write(0)
+                bw.write(0)
+            }
+            bw.close()
+        }
+        return
+    }
+
+    fun updatesave(){
+        val bw = openFileOutput("save", Context.MODE_PRIVATE)
+        for (i in 0..3) {
+            bw.write(scen_save[i] shr 24)
+            bw.write(scen_save[i] shr 16)
+            bw.write(scen_save[i] shr 8)
+            bw.write(scen_save[i])
+        }
+        bw.close()
+    }
+
     fun theatre(view: View){
         if (player.theatre()) {
             reload_stats()
@@ -54,6 +92,12 @@ class Center : AppCompatActivity() {
         if (player.square()) {
             reload_stats()
             writeinfile()
+            if (scen_save[0]==7){
+                val questpages = Intent(this, QuestActivity::class.java)
+                questpages.putExtra("num", ++scen_save[0])
+                updatesave()
+                startActivity(questpages)
+            }
         }else{
             val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
             note.show()
@@ -66,7 +110,7 @@ class Center : AppCompatActivity() {
             writeinfile()
             if ((0..4).random()==1) {
                 val questpages = Intent(this, QuestActivity::class.java)
-                questpages.putExtra("num", 4)
+                questpages.putExtra("num", 100)
                 startActivity(questpages)
                 readfromfile()
                 reload_stats()
@@ -107,6 +151,7 @@ class Center : AppCompatActivity() {
         super.onResume()
         readfromfile()
         reload_stats()
+        loadsave()
 
     }
 }

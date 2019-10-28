@@ -80,7 +80,7 @@
                 style="@style/AppTheme.TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/quest1_begin"
+                android:text=""
                 android:textColor="@color/text"
                 android:textSize="14sp" />
 

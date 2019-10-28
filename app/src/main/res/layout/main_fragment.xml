@@ -13,12 +13,11 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView47"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,8 +32,10 @@
                 android:src="@drawable/map_grey"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.567"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent" />
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -46,10 +47,10 @@
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.686"
+                app:layout_constraintHorizontal_bias="0.781"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
-                app:layout_constraintVertical_bias="0.268" />
+                app:layout_constraintVertical_bias="0.313" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -103,7 +104,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="gotosvalka"
-                android:text="Add_Городская_Свалка"
+                android:text="@string/map7"
                 android:textAllCaps="false"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -123,10 +124,10 @@
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.514"
+                app:layout_constraintHorizontal_bias="0.327"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
-                app:layout_constraintVertical_bias="0.079" />
+                app:layout_constraintVertical_bias="0.039" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -142,6 +143,56 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
                 app:layout_constraintVertical_bias="0.583" />
+
+            <TextView
+                android:id="@+id/textView54"
+                style="@style/AppTheme.ButtonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD_ПОРТ"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="59dp"
+                tools:layout_editor_absoluteY="342dp" />
+
+            <TextView
+                android:id="@+id/textView55"
+                style="@style/AppTheme.ButtonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD_АЛЕКСАНДРО-НЕВСКАЯ_ЗАСТАВА"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="294dp"
+                tools:layout_editor_absoluteY="332dp" />
+
+            <TextView
+                android:id="@+id/textView56"
+                style="@style/AppTheme.ButtonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD_ВЫБОРГСКАЯ СТОРОНА"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="183dp"
+                tools:layout_editor_absoluteY="70dp" />
+
+            <TextView
+                android:id="@+id/textView57"
+                style="@style/AppTheme.ButtonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD_МОСКОВСКАЯ"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="218dp"
+                tools:layout_editor_absoluteY="294dp" />
+
+            <TextView
+                android:id="@+id/textView58"
+                style="@style/AppTheme.ButtonMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADD_НАРВСКАЯ"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="102dp"
+                tools:layout_editor_absoluteY="292dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -278,5 +329,28 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="#00FFFFFF"
+        android:src="@android:drawable/ic_menu_help"
+        app:layout_constraintEnd_toEndOf="@+id/textView42"
+        app:layout_constraintStart_toEndOf="@+id/textView59"
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+    <TextView
+        android:id="@+id/textView59"
+        style="@style/AppTheme.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quest_ansv"
+        app:layout_constraintBottom_toBottomOf="@+id/textView47"
+        app:layout_constraintEnd_toEndOf="@+id/textView44"
+        app:layout_constraintStart_toStartOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="@+id/textView47" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

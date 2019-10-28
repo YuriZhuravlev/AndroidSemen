@@ -1,9 +1,11 @@
 package com.example.interactive_map
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
+import android.widget.Toast
 import com.example.interactive_map.ui.main.MainFragment
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_quest.*
@@ -14,6 +16,7 @@ import java.io.IOException
 class MainActivity : AppCompatActivity() {
 
     var player = player_class()
+    var scen_save = Array<Int>(4,{0})
 
     fun gotohome1(view: View) {
         val homepage = Intent(this, Home::class.java)
@@ -80,6 +83,43 @@ class MainActivity : AppCompatActivity() {
         this.finish()
     }
 
+    fun loadsave(){
+        try {
+            val br = openFileInput("save")
+            for (i in 0..3){
+                scen_save[i]=0
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+            }
+            br.close()
+        }catch (e: IOException){
+            val bw = openFileOutput("save", Context.MODE_PRIVATE)
+            for (i in 0..3) {
+                bw.write(0)
+                bw.write(0)
+                bw.write(0)
+                bw.write(0)
+            }
+            bw.close()
+        }
+        return
+    }
+
+    fun quest_ansv(){
+        when (scen_save[0]){
+            0, 1, 2, 3 -> imageButton.setOnClickListener {Toast.makeText(this, getString(R.string.quest1), Toast.LENGTH_SHORT).show() }
+            4 -> imageButton.setOnClickListener {Toast.makeText(this, getString(R.string.quest5), Toast.LENGTH_SHORT).show() }
+            5 -> imageButton.setOnClickListener {Toast.makeText(this, getString(R.string.quest6), Toast.LENGTH_SHORT).show() }
+            6 -> imageButton.setOnClickListener {Toast.makeText(this, getString(R.string.quest7), Toast.LENGTH_SHORT).show() }
+            7 -> imageButton.setOnClickListener {Toast.makeText(this, getString(R.string.quest8), Toast.LENGTH_SHORT).show() }
+            //8 -> imageButton.setOnClickListener {Toast.makeText(this, getString(R.string.quest1), Toast.LENGTH_SHORT).show() }
+            else -> imageButton.setOnClickListener {Toast.makeText(this, getString(R.string.quest_all), Toast.LENGTH_SHORT).show() }
+
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
@@ -94,5 +134,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         readfromfile()
         reload_stats()
+        loadsave()
+        quest_ansv()
     }
 }

@@ -22,6 +22,7 @@ class MenuActivity : AppCompatActivity() {
         player.set_name("Семён Манзырёв")
         writeinfile()
         newflags()
+        reloadsave()
         startActivity(Intent(this,MainActivity::class.java))
         startActivity(Intent(this,Home::class.java))
         //button37.isEnabled = true
@@ -34,6 +35,18 @@ class MenuActivity : AppCompatActivity() {
         bw.write(y shr 16)
         bw.write(y shr 8)
         bw.write(y)
+        bw.close()
+    }
+
+    fun reloadsave(){
+        val bw = openFileOutput("save", Context.MODE_PRIVATE)
+        var i=0;
+        while (i++<4) {
+            bw.write(0)
+            bw.write(0)
+            bw.write(0)
+            bw.write(0)
+        }
         bw.close()
     }
 

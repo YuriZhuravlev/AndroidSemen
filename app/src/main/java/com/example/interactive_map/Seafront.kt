@@ -1,15 +1,19 @@
 package com.example.interactive_map
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_seafront.*
+import java.io.IOException
 
 class Seafront : AppCompatActivity() {
 
     var player = player_class()
+    var flquest = true;
+    var scen_save = Array<Int>(4,{0})
 
     fun reload_stats(){
         //val note = Toast.makeText(this, player.get_money().toString(), Toast.LENGTH_SHORT)
@@ -43,6 +47,40 @@ class Seafront : AppCompatActivity() {
         bw.close()
     }
 
+    fun loadsave(){
+        try {
+            val br = openFileInput("save")
+            for (i in 0..3){
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+                scen_save[i]=(scen_save[i] shl 8) + br.read()
+            }
+            br.close()
+        }catch (e: IOException){
+            val bw = openFileOutput("save", Context.MODE_PRIVATE)
+            for (i in 0..3) {
+                bw.write(0)
+                bw.write(0)
+                bw.write(0)
+                bw.write(0)
+            }
+            bw.close()
+        }
+        return
+    }
+
+    fun updatesave(){
+        val bw = openFileOutput("save", Context.MODE_PRIVATE)
+        for (i in 0..3) {
+            bw.write(scen_save[i] shr 24)
+            bw.write(scen_save[i] shr 16)
+            bw.write(scen_save[i] shr 8)
+            bw.write(scen_save[i])
+        }
+        bw.close()
+    }
+
     fun read_paper(view: View){
         if (player.read_paper()) {
             reload_stats()
@@ -58,26 +96,47 @@ class Seafront : AppCompatActivity() {
             reload_stats()
             writeinfile()
         }else{
-            val note = Toast.makeText(this, "Невозможно дрочить, дамы смотрят же!!!", Toast.LENGTH_SHORT)
+            val note = Toast.makeText(this, "Невозможно наслаждаться!!!", Toast.LENGTH_SHORT)
             note.show()
         }
     }
+
     fun eat3(view: View){
-        if (player.eat3()) {
-            reload_stats()
-            writeinfile()
-            val questpages = Intent(this,QuestActivity::class.java)
-            questpages.putExtra("num",1)
+        if ((scen_save[3] and 0x00000001)==0 && (0..5).random() == 3) {
+            val questpages = Intent(this, QuestActivity::class.java)
+            questpages.putExtra("num", 97)
+            updatesave()
             startActivity(questpages)
-        }else{
-            val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
-            note.show()
-        }
+        }else {
+                if (player.eat3()) {
+                    reload_stats()
+                    writeinfile()
+                    if ((0..5).random() == 3 || (scen_save[3] xor 0x00000006 and 0x00000006) > 0){
+                        val questpages = Intent(this, QuestActivity::class.java)
+                        when (scen_save[3] xor 0x00000008){
+                            0x00000002 -> {questpages.putExtra("num",98); scen_save[3] or 0x00000002}
+                            0x00000004 -> {questpages.putExtra("num",99); scen_save[3] or 0x00000004}
+                        }
+                        updatesave()
+                        startActivity(questpages)
+                    }
+                } else {
+                    val note = Toast.makeText(this, "Невозможно выполнить!", Toast.LENGTH_SHORT)
+                    note.show()
+                }
+            }
     }
+
     fun smoke(view: View){
         if (player.smoke()) {
             reload_stats()
             writeinfile()
+            if (scen_save[0] == 5){
+                val questpages = Intent(this, QuestActivity::class.java)
+                questpages.putExtra("num", ++scen_save[0])
+                updatesave()
+                startActivity(questpages)
+            }
         }else{
             val note = Toast.makeText(this, "Нечего курить ?_?!", Toast.LENGTH_SHORT)
             note.show()
@@ -95,15 +154,17 @@ class Seafront : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seafront)
+        button16.setOnLongClickListener { show(getString(R.string.read_paper_show)) }
+        button17.setOnLongClickListener { show(getString(R.string.kek_show)) }
+        button24.setOnLongClickListener { show(getString(R.string.eat3_show)) }
+        button26.setOnLongClickListener { show(getString(R.string.smoke_show)) }
     }
 
     override fun onResume() {
         super.onResume()
         readfromfile()
         reload_stats()
-        button16.setOnLongClickListener { show(getString(R.string.read_paper_show)) }
-        button17.setOnLongClickListener { show(getString(R.string.kek_show)) }
-        button24.setOnLongClickListener { show(getString(R.string.eat3_show)) }
-        button26.setOnLongClickListener { show(getString(R.string.smoke_show)) }
+        loadsave()
+
     }
 }
